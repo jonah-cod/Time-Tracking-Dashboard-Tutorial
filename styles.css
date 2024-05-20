@@ -1,0 +1,195 @@
+@import url("https://fonts.google.com/specimen/Rubik");
+
+*{
+      font-family: "Rubik",  sans-serif;
+      box-sizing: border-box;
+}
+
+body{
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+      background-color: hsl(226, 43%, 10%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.container{
+      max-width: 1040px;
+      width: 100%;
+      display: flex;
+      gap: 16px;
+      padding: 16px;
+}
+
+.left-card{
+      width: 25%;
+      background-color: hsl(235, 46%, 20%);
+      border-radius: 10px;
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+      padding-bottom: 16px;
+}
+.profile{
+      background-color: hsl(246, 80%, 60%);
+      padding: 16px;
+      border-radius: 10px;
+      height: 70%;
+}
+
+.profile>img{
+      width: 48px;
+      border: white 2px solid;
+      border-radius: 50%;
+      margin-bottom: 32px;
+}
+
+.profile>span{
+      display: block;
+      color: hsl(236, 100%, 87%);
+      font-size: 14px;
+}
+
+.profile>h2{
+      margin: 0;
+      color: white;
+      font-weight: 300;
+      font-family: "Rubik", sans-serif;
+      word-break:break-all;
+}
+
+.left-card>a{
+      text-decoration: none;
+      color: hsl(235, 45%, 61%);
+      margin-left: 16px;
+      
+}
+
+.left-card .active{
+      color: white;
+}
+
+
+.cards{
+      width: 75%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+
+}
+
+.card{
+      border-radius: 10px;
+      position: relative;
+      z-index: -10;
+}
+
+.cards .work{
+      background-color: hsl(15, 100%, 70%);
+}
+
+.cards .play{
+      background-color: hsl(195, 74%, 62%);
+}
+
+.cards .study{
+      background-color: hsl(348, 100%, 68%);
+}
+
+.cards .exercise{
+      background-color: hsl(145, 58%, 55%);
+}
+
+.cards .social{
+      background-color: hsl(264, 64%, 52%);
+}
+
+.cards .self-care{
+      background-color: hsl(43, 84%, 65%);
+}
+
+.card>img{
+      width: 36px;
+      position: absolute;
+      right: 10px;
+      top: 0;
+      z-index: -1;
+}
+
+
+.card-details{
+      margin-top: 30px;
+      background-color: hsl(235, 46%, 20%);
+      border-radius: 10px;
+      padding: 16px;
+
+}
+
+.card-title{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+
+.card-title>h6{
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+}
+
+.card-details>h4{
+      color: white;
+      font-size: 48px;
+      font-weight: 500;
+      margin: 16px 0;
+}
+
+.card-details>p{
+      color: hsl(235, 45%, 61%);
+      font-size: 14px;
+}
+
+
+@media (max-width:700px) {
+      .container{
+            flex-direction: column;
+            
+      }
+
+      .left-card{
+            width: 100%;
+      }
+
+      .profile>img{
+            float: left;
+            margin-right: 16px;
+      }
+      .cards{
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+      }
+}
+
+
+@media (max-width:450px) {
+      .container{
+            flex-direction: column;
+      }
+
+      .left-card{
+            width: 100%;
+      }
+
+      .profile>img{
+            float: left;
+            margin-right: 16px;
+      }
+
+      .cards{
+            grid-template-columns: 1fr;
+            width: 100%;
+      }
+}
